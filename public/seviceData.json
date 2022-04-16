@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "One to one Tutoring",
+        "price": "8000",
+        "description": "One-to-one instruction describes a student learning from and interacting with a teacher individually, with instruction tailored to the student's own personal pace and learning needs",
+        "img": "https://i.ibb.co/dGDkr4v/1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Personalized Homeword Support",
+        "price": "4000",
+        "description": "Are you tired of not achieving higher grades, or is the urgent deadline causing you stress? If these make you worried, then I can help you",
+        "img": "https://i.ibb.co/tY8dmnP/2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Concept Clearing on Specific topics",
+        "price": "2500",
+        "description": "While studing , you are most likely to have so many confusion about some topics . We can help you understand the topics cleary . I can help you do that as fast as possible.",
+        "img": "https://i.ibb.co/Yh04YVw/3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "One-on-one Mentorship support",
+        "price": "3000",
+        "description": "Studing can be frustring sometimes . But with smart technique and right path , you can enjoy your studies and be productive as well . I can guide you with yours studies",
+        "img": "https://i.ibb.co/ZX2Cbkn/4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Test Preparation with Demo Q/A",
+        "price": "3500",
+        "description": "Studing is not enough . You must try solving some questions from previous year to make yourself ready for your real test exam . Let me help you prepare yourself .",
+        "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Final Admission preparation with model test",
+        "price": "6500",
+        "description": "Admission test is always a surprice for us . you have to be preapared in many ways . The more you practice the more you learn and be confident . Let give the 'model-tests' a go with me for a better result in addmission test",
+        "img": "https://i.ibb.co/zJy5ZDd/6.jpg"
+    }
+]
