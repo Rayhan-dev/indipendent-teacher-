@@ -7,7 +7,7 @@ import Foorter from './Components/Footer/Foorter';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Header></Header>
       <Banner></Banner>
       <ServiceSection></ServiceSection>
