@@ -3,7 +3,7 @@ import './Banner.css'
 
 const Banner = () => {
     return (
-        <div className='container banner '>
+        <div className='container banner py-5'>
             <div className="row ">
                 <div className="col-md-5 my-auto">
                     <h1 className='text-primary text-start'>Best Tutor Focused on your Success</h1>

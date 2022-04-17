@@ -8,4 +8,4 @@ const Foorter = () => {
     );
 };
 
-export default Foorter;<h1>footer</h1>
+export default Foorter;

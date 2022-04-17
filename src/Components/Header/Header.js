@@ -4,7 +4,7 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 const Header = () => {
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+      <Navbar className="py-3" collapseOnSelect expand="lg" bg="primary" variant="dark">
         <Container>
           <Navbar.Brand href="#home">
             <img
@@ -22,7 +22,7 @@ const Header = () => {
               <Nav.Link href="#features">Home</Nav.Link>
               <Nav.Link href="#pricing">Services</Nav.Link>
               <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.1">Blog</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Another action
                 </NavDropdown.Item>
