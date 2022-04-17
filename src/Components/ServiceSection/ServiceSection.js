@@ -9,10 +9,10 @@ const ServiceSection = () => {
           .then((data) => setServices(data));
   }, []);
   return (
-    <div className="container">
+    <div id="services" className="container">
       <h1 className="text-primary py-5">Services</h1>
 
-      <div className="row">
+      <div className="row pb-5">
         {services.map((service) => (
           <Service service={service}></Service>
            
