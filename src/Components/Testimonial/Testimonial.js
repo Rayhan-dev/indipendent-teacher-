@@ -3,7 +3,7 @@ import { Button, Card } from "react-bootstrap";
 
 const Testimonial = ({testimonial}) => {
   return (
-    <div className="col-md-4">
+    <div className="col-md-4 mx-auto">
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={testimonial.img} />
         <Card.Body>
