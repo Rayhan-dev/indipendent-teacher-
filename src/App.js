@@ -10,6 +10,7 @@ import RequiredAuth from "./Components/RequiredAuth/RequiredAuth";
 import ServiceCheckOut from "./Components/ServiceCheckOut/ServiceCheckOut";
 import Aboutme from "./Components/Aboutme/Aboutme";
 import Blog from "./Components/Blog/Blog";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="*" element={<NotFoundPage></NotFoundPage>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import React from "react";
-import "./Foorter.css";
+import { Link } from "react-router-dom";
+import './Footer.css'
 
-const Foorter = () => {
+const Footer = () => {
   return (
     <div className="my- bg-dark text-white py-3">
       <div>
@@ -11,9 +12,9 @@ const Foorter = () => {
         <div className="row">
           <div className="col-md-6 my-auto">
             <h3>Important Links</h3>
-            <a href="#services">Services</a>
-            <a href="blogs">Blogs</a>
-            <a href="login">login</a>
+            <a className="link-item"  href="#services">Services</a>
+            <Link className="link-item" to={'/blog'}>Blogs</Link>
+            <Link className="link-item" to={'/login'}>login</Link>
           </div>
           <div className="col-md-6 my-auto">
             <p>All right reserved by Rayhan </p>
@@ -24,4 +25,4 @@ const Foorter = () => {
   );
 };
 
-export default Foorter;
+export default Footer;
