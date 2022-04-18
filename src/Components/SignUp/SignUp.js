@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useSendEmailVerification,
+} from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
+  const [sendEmailVerification, sending, varificationError] =
+    useSendEmailVerification(auth);
   let navigate = useNavigate();
   const navigateSignIn = () => {
     navigate("/login");
@@ -23,21 +28,24 @@ const SignUp = () => {
   };
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    navigate("/home")
+    navigate("/home");
   };
-  // if (error) {
-  //     <div>
-  //       <p>Error: {error.message}</p>
-  //     </div>
-  //   ;
-  // }
-  // if (loading) {
-  //   return (
-  //     <div class="spinner-border" role="status">
-  //       <span class="sr-only"></span>
-  //     </div>
-  //   );
-  // }
+  let errorElement;
+  if (error) {
+    errorElement = (
+      <div>
+        <p>Error: {error.message}</p>
+      </div>
+    );
+  }
+  let varifyError;
+  if (varificationError) {
+    varifyError = (
+      <div>
+        <p>Error: {varificationError.message}</p>
+      </div>
+    );
+  }
   return (
     <div className="container my-5">
       <Form onSubmit={handleFormSubmit} className="w-50 mx-auto text-start">
@@ -76,6 +84,8 @@ const SignUp = () => {
           Login
         </Link>
       </p>
+      {errorElement}
+      {varifyError}
     </div>
   );
 };
