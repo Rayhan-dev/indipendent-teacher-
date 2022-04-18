@@ -14,7 +14,7 @@ const Blog = () => {
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              Difference between authorization and authentication
+              Difference between authorization and authentication
             </button>
           </h2>
           <div
@@ -66,7 +66,7 @@ const Blog = () => {
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              Why are you using firebase? What other options do you have to
+              Why are you using firebase? What other options do you have to
               implement authentication?
             </button>
           </h2>
@@ -97,7 +97,7 @@ const Blog = () => {
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              What other services does firebase provide other than
+              What other services does firebase provide other than
               authentication
             </button>
           </h2>
