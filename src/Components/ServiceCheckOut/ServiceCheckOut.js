@@ -2,7 +2,7 @@ import React from "react";
 import { Button} from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 
-const ServiceDetails = () => {
+const ServiceCheckOut = () => {
     const { serviceId } = useParams();
     return (
     <div className="container">
@@ -13,4 +13,4 @@ const ServiceDetails = () => {
   );
 };
 
-export default ServiceDetails;
+export default ServiceCheckOut;

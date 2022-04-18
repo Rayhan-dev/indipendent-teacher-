@@ -5,10 +5,9 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./Components/HomePage/HomePage";
 import Login from "./Components/Login/Login";
 import NotFoundPage from "./Components/NotFoundPage/NotFoundPage";
-import ServiceDetails from "./Components/ServiceDetails/ServiceDetails";
 import SignUp from "./Components/SignUp/SignUp";
-import CheckOut from "./Components/CheckOut/CheckOut";
 import RequiredAuth from "./Components/RequiredAuth/RequiredAuth";
+import ServiceCheckOut from "./Components/ServiceCheckOut/ServiceCheckOut";
 
 function App() {
   return (
@@ -21,13 +20,9 @@ function App() {
         <Route path="/register" element={<SignUp></SignUp>}></Route>
         <Route
           path="/service/:serviceId"
-          element={<ServiceDetails></ServiceDetails>}
-        ></Route>
-        <Route
-          path="/checkout"
           element={
             <RequiredAuth>
-              <CheckOut></CheckOut>
+            <ServiceCheckOut></ServiceCheckOut>
             </RequiredAuth>
           }
         ></Route>

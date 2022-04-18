@@ -4,6 +4,7 @@ import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
   let navigate = useNavigate();
@@ -79,6 +80,7 @@ const Login = () => {
           Register Now
         </Link>
       </p>
+      <SocialLogin></SocialLogin>
     </div>
   );
 };
