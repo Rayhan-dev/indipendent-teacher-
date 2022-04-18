@@ -6,7 +6,7 @@ const ServiceCheckOut = () => {
     return (
     <div style={{minHeight:'75vh'}} className="container">
       <h1>Selected product</h1>
-        <h2>this is checkout root for product : {serviceId}</h2>
+        <h2>this is checkout route for product : {serviceId}</h2>
     </div>
   );
 };
