@@ -6,13 +6,21 @@ import auth from "../../firebase.init";
 
 const SocialLogin = () => {
     const navigate = useNavigate();
-    const [signInWithGoogle, user] = useSignInWithGoogle(auth);
-    const handleSignInWithGoogle = () => {
+    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  const handleSignInWithGoogle = () => {
         signInWithGoogle();
     }
     if (user) {
         navigate('/')
-    }
+  }
+  let erorrElement;
+  if (error) {
+    erorrElement= (
+      <div>
+        <p className="text-danger">Error: {error.message}</p>
+      </div>
+    );
+  }
   return (
     <div>
           <button className="btn btn-primary" onClick={handleSignInWithGoogle}>
@@ -24,6 +32,7 @@ const SocialLogin = () => {
         />
         <span>log In with Google</span>
       </button>
+      {erorrElement}
     </div>
   );
 };

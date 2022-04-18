@@ -9,7 +9,7 @@ const Foorter = () => {
       </div>
       <div className="container">
         <div className="row">
-          <div className="col-md-6 text-start my-auto">
+          <div className="col-md-6 my-auto">
             <h3>Important Links</h3>
             <a href="#services">Services</a>
             <a href="blogs">Blogs</a>

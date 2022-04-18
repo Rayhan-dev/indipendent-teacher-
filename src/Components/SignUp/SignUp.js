@@ -9,10 +9,13 @@ import auth from "../../firebase.init";
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
-  const [sendEmailVerification, sending, varificationError] =
-    useSendEmailVerification(auth);
+  const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
+  const [sendEmailVerification, sending, varificationError] = useSendEmailVerification(auth);
+  const handleSignUp = () => {  
+    createUserWithEmailAndPassword(email, password);
+      sendEmailVerification();
+      alert('Sent email');
+  }
   let navigate = useNavigate();
   const navigateSignIn = () => {
     navigate("/login");
@@ -28,13 +31,13 @@ const SignUp = () => {
   };
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    navigate("/home");
+    navigate("/");
   };
   let errorElement;
   if (error) {
     errorElement = (
       <div>
-        <p>Error: {error.message}</p>
+        <p className="text-danger">Error: {error.message}</p>
       </div>
     );
   }
@@ -42,13 +45,13 @@ const SignUp = () => {
   if (varificationError) {
     varifyError = (
       <div>
-        <p>Error: {varificationError.message}</p>
+        <p className="text-danger">Error: {varificationError.message}</p>
       </div>
     );
   }
   return (
     <div className="container my-5">
-      <Form onSubmit={handleFormSubmit} className="w-50 mx-auto text-start">
+      <Form onSubmit={handleFormSubmit} className="w-50 mx-auto text-start my-5">
         <h1 className="my-4">Please Sign Up</h1>
         <Form.Group className="mb-3">
           <Form.Control onBlur={getName} type="text" placeholder="Your Name" />
@@ -71,11 +74,11 @@ const SignUp = () => {
           />
         </Form.Group>
         <Button
-          onClick={() => createUserWithEmailAndPassword(email, password)}
+          onClick={ handleSignUp }
           variant="primary"
           type="submit"
         >
-          Submit
+          sign up
         </Button>
       </Form>
       <p>
