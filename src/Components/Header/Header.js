@@ -9,7 +9,7 @@ const Header = () => {
   const [user] = useAuthState(auth);
   const handleSignOut = () => {
     signOut(auth);
-  }
+  };
   return (
     <div>
       <Navbar
@@ -26,23 +26,28 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="ms-auto">
               <Nav.Link as={Link} to={"/homePage"}>
                 Home
               </Nav.Link>
               <Nav.Link href="homePage#services">Services</Nav.Link>
+              <Nav.Link as={Link} to={"/aboutme"}>
+                About me
+              </Nav.Link>
+              <Nav.Link as={Link} to={"/blog"}>
+                Blog
+              </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link>User Name</Nav.Link>
-              {user ? 
-                <Nav.Link eventKey={2} onClick={handleSignOut}> 
+              {user ? (
+                <Nav.Link eventKey={2} onClick={handleSignOut}>
                   Sign Out
                 </Nav.Link>
-               : 
+              ) : (
                 <Nav.Link eventKey={2} as={Link} to={"/login"}>
                   Login
                 </Nav.Link>
-              }
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

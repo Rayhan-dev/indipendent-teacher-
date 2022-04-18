@@ -6,7 +6,7 @@ import auth from "../../firebase.init";
 
 const SocialLogin = () => {
     const navigate = useNavigate();
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, user] = useSignInWithGoogle(auth);
     const handleSignInWithGoogle = () => {
         signInWithGoogle();
     }
