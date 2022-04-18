@@ -2,7 +2,7 @@ import React from 'react';
 
 const NotFoundPage = () => {
     return (
-        <div>
+        <div style={{minHeight:"75vh"}}>
             <h1>Page Not found</h1>
         </div>
     );

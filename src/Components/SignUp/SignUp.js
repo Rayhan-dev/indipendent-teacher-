@@ -50,7 +50,7 @@ const SignUp = () => {
     );
   }
   return (
-    <div className="container my-5">
+    <div className="container my-5" style={{minHeight:"65vh"}}>
       <Form onSubmit={handleFormSubmit} className="w-50 mx-auto text-start my-5">
         <h1 className="my-4">Please Sign Up</h1>
         <Form.Group className="mb-3">
