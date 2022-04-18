@@ -31,13 +31,13 @@ const SignUp = () => {
   //     </div>
   //   ;
   // }
-  if (loading) {
-    return (
-      <div class="spinner-border" role="status">
-        <span class="sr-only"></span>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div class="spinner-border" role="status">
+  //       <span class="sr-only"></span>
+  //     </div>
+  //   );
+  // }
   return (
     <div className="container my-5">
       <Form onSubmit={handleFormSubmit} className="w-50 mx-auto text-start">

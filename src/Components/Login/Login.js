@@ -1,30 +1,34 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 const Login = () => {
   let navigate = useNavigate();
   const navigateRegister = () => {
     navigate("/register");
   };
+  const location = useLocation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [signInWithEmailAndPassword, user, loading, error] =
+  const [signInWithEmailAndPassword, user , loading] =
     useSignInWithEmailAndPassword(auth);
+  let from = location.state?.from?.pathname || "/";
+ 
 
-  if (error) {
-    return (
-      <div>
-        <p>Error: {error.message}</p>
-      </div>
-    );
-  }
+  // if (error) {
+  //   return (
+  //     <div>
+  //       <p>Error: {error.message}</p>
+  //     </div>
+  //   );
+  // }
   if (loading) {
-    return <p>Loading...</p>;
+    <LoadingSpinner></LoadingSpinner>
   }
-  
+
   const getEmail = (event) => {
     setEmail(event.target.value);
   };
@@ -33,7 +37,11 @@ const Login = () => {
   };
   const handleFormSubmit = (event) => {
     event.preventDefault();
+    signInWithEmailAndPassword(email, password);
   };
+  if (user) {
+    navigate(from, { replace: true });
+  }
 
   return (
     <div className="container my-5">
@@ -57,11 +65,7 @@ const Login = () => {
           />
         </Form.Group>
 
-        <Button
-          onClick={() => signInWithEmailAndPassword(email, password)}
-          variant="primary"
-          type="submit"
-        >
+        <Button variant="primary" type="submit">
           Login
         </Button>
       </Form>
