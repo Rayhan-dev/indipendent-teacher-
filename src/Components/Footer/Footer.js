@@ -12,7 +12,6 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-6 my-auto">
             <h3>Important Links</h3>
-            <a className="link-item"  href="#services">Services</a>
             <Link className="link-item" to={'/blog'}>Blogs</Link>
             <Link className="link-item" to={'/login'}>login</Link>
           </div>
