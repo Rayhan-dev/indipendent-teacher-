@@ -1,7 +1,7 @@
 # Website name : Study-Buddy
 
 
-# [Clilck here to visit the live website](https://github.com/facebook/create-react-app).
+# [Clilck here to visit the live website](https://study-buddy-d565c.web.app/).
 
 ## Features and Functionalities 
 * Single Page Application
