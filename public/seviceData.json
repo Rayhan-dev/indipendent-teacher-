@@ -29,14 +29,14 @@
     },
     {
         "id": 5,
-        "name": "Test Preparation with Demo Q/A",
+        "name": "Test Preparation with Demo Q and A",
         "price": "3500",
         "description": "Studing is not enough . You must try solving some questions from previous year to make yourself ready for your real test exam . Let me help you prepare yourself. are you ready?",
         "img": "images/5.jpg"
     },
     {
         "id": 6,
-        "name": "Final Admission preparation with Q/A",
+        "name": "Final Admission preparation with Q and A",
         "price": "6500",
         "description": "Admission test is always a surprice for us g. The more you practice the more you learn and be confident . Let give the 'model-tests' a go with me for a better result in addmission test",
         "img": "images/6.jpg"

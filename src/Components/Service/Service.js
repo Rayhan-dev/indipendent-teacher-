@@ -6,7 +6,7 @@ import "./Service.css";
 const Service = ({ service }) => {
   const navigate = useNavigate();
   const navigateToServiceDetails = (service) => {
-    navigate(`/service/${service.id}`);
+    navigate(`/service/${service.name}`);
   };
   return (
     <div className="col-md-4 my-3">
