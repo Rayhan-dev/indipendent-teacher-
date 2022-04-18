@@ -3,7 +3,7 @@ import React from 'react';
 const Aboutme = () => {
     return (
         <div>
-            about me page
+            <h1>I am <span className='text-primary' >Kamrul Munir Md Rayhan</span></h1>
         </div>
     );
 };
